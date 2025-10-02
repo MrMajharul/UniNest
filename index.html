@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniNest - Project Retrospective</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-container">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="UniNest Logo" class="logo-image" id="uniNestLogo">
+                    <div class="logo-text">
+                        <h1>UniNest</h1>
+                        <p class="tagline">Solving University Problems, One Solution at a Time</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#welcome" class="nav-link">Welcome</a>
+                <a href="#challenges" class="nav-link">Challenges</a>
+                <a href="#solutions" class="nav-link">Solutions</a>
+                <a href="#learnings" class="nav-link">Learnings</a>
+            </nav>
+        </header>
+
+        <!-- Welcome and Purpose Section -->
+        <section id="welcome" class="section welcome-section">
+            <div class="content">
+                <h2 class="section-title">Welcome & Purpose</h2>
+                <div class="intro-card">
+                    <h3>Project Retrospective Overview</h3>
+                    <p class="intro-text">
+                        Welcome to the UniNest project retrospective. This comprehensive review examines our journey in creating 
+                        innovative solutions for university-related challenges, transforming problems into practical web-based products.
+                    </p>
+                    
+                    <div class="goals-grid">
+                        <div class="goal-item">
+                            <div class="goal-icon">🎯</div>
+                            <h4>Primary Goal</h4>
+                            <p>Develop a comprehensive platform addressing key university pain points through technology</p>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-icon">🚀</div>
+                            <h4>Innovation Focus</h4>
+                            <p>Create user-friendly web solutions that streamline university processes and enhance student experience</p>
+                        </div>
+                        <div class="goal-item">
+                            <div class="goal-icon">🤝</div>
+                            <h4>Community Impact</h4>
+                            <p>Build a platform that serves both students and university administration effectively</p>
+                        </div>
+                    </div>
+
+                    <div class="project-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="projectDuration">0</span>
+                            <span class="stat-label">Days in Development</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="featuresBuilt">0</span>
+                            <span class="stat-label">Features Implemented</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="issuesResolved">0</span>
+                            <span class="stat-label">Issues Resolved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Faced Section -->
+        <section id="challenges" class="section challenges-section">
+            <div class="content">
+                <h2 class="section-title">Challenges Faced</h2>
+                
+                <div class="challenges-container">
+                    <!-- Technical Difficulties -->
+                    <div class="challenge-category">
+                        <div class="challenge-header">
+                            <div class="challenge-icon">⚙️</div>
+                            <h3>Technical Difficulties</h3>
+                        </div>
+                        <div class="challenge-list">
+                            <div class="challenge-item">
+                                <h4>Frontend Integration Complexity</h4>
+                                <p>Struggled with responsive design implementation across different devices and browsers</p>
+                                <div class="severity high">High Impact</div>
+                            </div>
+                            <div class="challenge-item">
+                                <h4>Database Schema Design</h4>
+                                <p>Initial database structure didn't accommodate the complex relationships between university entities</p>
+                                <div class="severity medium">Medium Impact</div>
+                            </div>
+                            <div class="challenge-item">
+                                <h4>API Performance Optimization</h4>
+                                <p>Encountered slow response times when handling large datasets from university systems</p>
+                                <div class="severity medium">Medium Impact</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Time Management -->
+                    <div class="challenge-category">
+                        <div class="challenge-header">
+                            <div class="challenge-icon">⏰</div>
+                            <h3>Time Management</h3>
+                        </div>
+                        <div class="challenge-list">
+                            <div class="challenge-item">
+                                <h4>Scope Creep</h4>
+                                <p>Additional features were continuously added, extending the project timeline beyond initial estimates</p>
+                                <div class="severity high">High Impact</div>
+                            </div>
+                            <div class="challenge-item">
+                                <h4>Testing Phase Underestimation</h4>
+                                <p>Insufficient time allocated for comprehensive testing led to rushed deployment preparation</p>
+                                <div class="severity medium">Medium Impact</div>
+                            </div>
+                            <div class="challenge-item">
+                                <h4>Research and Learning Curve</h4>
+                                <p>New technologies required more learning time than anticipated</p>
+                                <div class="severity low">Low Impact</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Communication Gaps -->
+                    <div class="challenge-category">
+                        <div class="challenge-header">
+                            <div class="challenge-icon">💬</div>
+                            <h3>Communication Gaps</h3>
+                        </div>
+                        <div class="challenge-list">
+                            <div class="challenge-item">
+                                <h4>Stakeholder Feedback Delays</h4>
+                                <p>Inconsistent communication with university stakeholders led to misaligned expectations</p>
+                                <div class="severity medium">Medium Impact</div>
+                            </div>
+                            <div class="challenge-item">
+                                <h4>Documentation Inconsistencies</h4>
+                                <p>Lack of standardized documentation format caused confusion during development handoffs</p>
+                                <div class="severity low">Low Impact</div>
+                            </div>
+                            <div class="challenge-item">
+                                <h4>Version Control Conflicts</h4>
+                                <p>Merge conflicts occurred due to insufficient communication about simultaneous feature development</p>
+                                <div class="severity low">Low Impact</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions & Learnings Section -->
+        <section id="solutions" class="section solutions-section">
+            <div class="content">
+                <h2 class="section-title">Solutions & Improvements</h2>
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <h3>Technical Solutions</h3>
+                        <ul>
+                            <li>Implemented modular CSS architecture for better maintainability</li>
+                            <li>Adopted progressive web app principles for better performance</li>
+                            <li>Integrated caching strategies to improve load times</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Process Improvements</h3>
+                        <ul>
+                            <li>Established daily standup meetings for better coordination</li>
+                            <li>Implemented agile sprints with defined deliverables</li>
+                            <li>Created comprehensive testing checklists</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Communication Enhancements</h3>
+                        <ul>
+                            <li>Set up regular stakeholder review sessions</li>
+                            <li>Established clear documentation standards</li>
+                            <li>Implemented code review processes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Learnings Section -->
+        <section id="learnings" class="section learnings-section">
+            <div class="content">
+                <h2 class="section-title">Key Learnings & Next Steps</h2>
+                <div class="learnings-container">
+                    <div class="learning-item">
+                        <h3>🎓 Technical Learnings</h3>
+                        <p>Mastered responsive design patterns and gained deep understanding of modern JavaScript frameworks for university application development.</p>
+                    </div>
+                    <div class="learning-item">
+                        <h3>📋 Project Management</h3>
+                        <p>Learned the importance of realistic time estimation and the value of iterative development in university project contexts.</p>
+                    </div>
+                    <div class="learning-item">
+                        <h3>🤝 Stakeholder Engagement</h3>
+                        <p>Discovered the critical importance of continuous communication with university administrators and end users.</p>
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>Next Steps for UniNest</h3>
+                    <div class="steps-timeline">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Phase 2 Development</h4>
+                                <p>Implement advanced features based on user feedback</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>University Partnerships</h4>
+                                <p>Expand to additional university campuses</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Mobile Application</h4>
+                                <p>Develop native mobile apps for enhanced accessibility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 UniNest Project. Building the future of university solutions.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">GitHub</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
