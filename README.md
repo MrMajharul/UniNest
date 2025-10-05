@@ -239,7 +239,7 @@ We'll keep things simple at the start (maybe just a single repo).
 |------| ---------- |
 | Taslim Ahmed Tamim | Student Developer | 
 | Salman Kabir Sany | Student Developer |
-| Majharul Islam | Student Developer & Project Lead |
+| Majharul Islam | Student Developer |
 
 ## 🚀 Quick Demo Flow (Planned)
 
