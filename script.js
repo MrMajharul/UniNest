@@ -1,14 +1,14 @@
 // DOM Elements
-const projectDurationEl = document.getElementById('projectDuration');
-const featuresBuiltEl = document.getElementById('featuresBuilt');
-const issuesResolvedEl = document.getElementById('issuesResolved');
+const plannedFeaturesEl = document.getElementById('plannedFeatures');
+const teamMembersEl = document.getElementById('teamMembers');
+const developmentPhasesEl = document.getElementById('developmentPhases');
 const logoImg = document.getElementById('uniNestLogo');
 
 // Project Statistics Data
 const projectStats = {
-    duration: 90,
-    features: 15,
-    issues: 28
+    plannedFeatures: 8,
+    teamMembers: 3,
+    developmentPhases: 6
 };
 
 // Counter Animation Function
@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Animate project statistics
     setTimeout(() => {
-        animateCounter(projectDurationEl, projectStats.duration);
-        animateCounter(featuresBuiltEl, projectStats.features);
-        animateCounter(issuesResolvedEl, projectStats.issues);
+        animateCounter(plannedFeaturesEl, projectStats.plannedFeatures);
+        animateCounter(teamMembersEl, projectStats.teamMembers);
+        animateCounter(developmentPhasesEl, projectStats.developmentPhases);
     }, 500);
     
     // Initialize smooth scrolling for navigation
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize interactive features
     initInteractiveFeatures();
     
-    // Initialize challenge severity indicators
-    initChallengeInteractions();
+    // Initialize feature interactions
+    initFeatureInteractions();
     
     // Initialize progress tracking
     initProgressTracking();
@@ -90,50 +90,62 @@ function initInteractiveFeatures() {
         });
     });
     
-    // Add click effects to solution cards
-    const solutionCards = document.querySelectorAll('.solution-card');
-    solutionCards.forEach(card => {
-        card.addEventListener('click', function() {
+    // Add click effects to demo items
+    const demoItems = document.querySelectorAll('.demo-item');
+    demoItems.forEach(item => {
+        item.addEventListener('click', function() {
             this.classList.add('clicked');
             setTimeout(() => {
                 this.classList.remove('clicked');
             }, 200);
         });
     });
+    
+    // Add hover effects to story cards
+    const storyCards = document.querySelectorAll('.story-card');
+    storyCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
 }
 
-// Challenge Interactions
-function initChallengeInteractions() {
-    const challengeItems = document.querySelectorAll('.challenge-item');
+// Feature Interactions
+function initFeatureInteractions() {
+    const featureItems = document.querySelectorAll('.feature-item');
     
-    challengeItems.forEach(item => {
+    featureItems.forEach(item => {
         // Add click to expand functionality
         item.addEventListener('click', function() {
             const isExpanded = this.classList.contains('expanded');
             
             // Close all other expanded items
-            challengeItems.forEach(i => i.classList.remove('expanded'));
+            featureItems.forEach(i => i.classList.remove('expanded'));
             
             if (!isExpanded) {
                 this.classList.add('expanded');
                 
                 // Add detailed information for expanded state
-                if (!this.querySelector('.challenge-details')) {
+                if (!this.querySelector('.feature-details')) {
                     const details = document.createElement('div');
-                    details.className = 'challenge-details';
+                    details.className = 'feature-details';
                     details.innerHTML = `
-                        <div class="challenge-metrics">
+                        <div class="feature-metrics">
                             <div class="metric">
-                                <span class="metric-label">Time Lost:</span>
-                                <span class="metric-value">${Math.floor(Math.random() * 20) + 5} hours</span>
+                                <span class="metric-label">Development Time:</span>
+                                <span class="metric-value">${Math.floor(Math.random() * 4) + 2} weeks</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-label">Resolution Status:</span>
-                                <span class="metric-value">Resolved</span>
+                                <span class="metric-label">Complexity:</span>
+                                <span class="metric-value">Medium</span>
                             </div>
                             <div class="metric">
-                                <span class="metric-label">Lessons Learned:</span>
-                                <span class="metric-value">Process Improved</span>
+                                <span class="metric-label">User Impact:</span>
+                                <span class="metric-value">High</span>
                             </div>
                         </div>
                     `;
@@ -142,22 +154,45 @@ function initChallengeInteractions() {
             }
         });
         
-        // Add severity-based color coding
-        const severity = item.querySelector('.severity');
-        if (severity) {
+        // Add status-based color coding
+        const status = item.querySelector('.status');
+        if (status) {
             item.addEventListener('mouseenter', function() {
-                const severityClass = severity.classList.contains('high') ? 'high' : 
-                                   severity.classList.contains('medium') ? 'medium' : 'low';
-                this.style.borderLeftColor = severityClass === 'high' ? '#e74c3c' : 
-                                           severityClass === 'medium' ? '#f39c12' : '#27ae60';
+                const statusClass = status.classList.contains('priority') ? 'priority' : 
+                                   status.classList.contains('planned') ? 'planned' : 'future';
+                this.style.borderLeftColor = statusClass === 'priority' ? '#e74c3c' : 
+                                           statusClass === 'planned' ? '#3498db' : '#95a5a6';
                 this.style.borderLeftWidth = '6px';
             });
             
             item.addEventListener('mouseleave', function() {
-                this.style.borderLeftColor = '#e74c3c';
+                this.style.borderLeftColor = '#3498db';
                 this.style.borderLeftWidth = '4px';
             });
         }
+    });
+    
+    // Add team member interactions
+    const teamMembers = document.querySelectorAll('.team-member');
+    teamMembers.forEach(member => {
+        member.addEventListener('click', function() {
+            this.classList.add('clicked');
+            setTimeout(() => {
+                this.classList.remove('clicked');
+            }, 300);
+        });
+    });
+    
+    // Add phase timeline interactions
+    const phases = document.querySelectorAll('.phase');
+    phases.forEach(phase => {
+        phase.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        phase.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
     });
 }
 
@@ -302,16 +337,16 @@ function getCurrentSectionIndex(sections) {
     return 0;
 }
 
-// Add CSS for expanded challenge items
+// Add CSS for expanded feature items
 const expandedStyles = `
-.challenge-item.expanded {
+.feature-item.expanded {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-left-color: #3498db;
     border-left-width: 6px;
     box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
 }
 
-.challenge-details {
+.feature-details {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #e9ecef;
@@ -319,7 +354,7 @@ const expandedStyles = `
     animation: fadeIn 0.3s ease forwards;
 }
 
-.challenge-metrics {
+.feature-metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
@@ -345,9 +380,14 @@ const expandedStyles = `
     color: #2c3e50;
 }
 
-.solution-card.clicked {
+.demo-item.clicked {
     transform: scale(0.98);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-member.clicked {
+    transform: scale(0.95) rotate(2deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link.active {
@@ -369,77 +409,17 @@ document.head.appendChild(styleSheet);
 
 // Load UniNest Logo
 function loadUniNestLogo() {
-    // Create a canvas to convert the logo image to base64
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    
-    // Create an image element for the logo
-    const img = new Image();
-    
-    // Set up the logo with a fallback SVG version
-    const logoSVG = `
-        <svg width="80" height="80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
-                    <stop offset="50%" style="stop-color:#27ae60;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#16a085;stop-opacity:1" />
-                </linearGradient>
-            </defs>
-            
-            <!-- Circular background -->
-            <circle cx="100" cy="100" r="95" fill="url(#gradient1)" stroke="#ffffff" stroke-width="3"/>
-            
-            <!-- UN letters -->
-            <text x="100" y="80" font-family="Arial, sans-serif" font-size="36" font-weight="bold" 
-                  text-anchor="middle" fill="#ffffff">UN</text>
-            
-            <!-- University icons -->
-            <g transform="translate(100, 120)">
-                <!-- Book icon -->
-                <rect x="-25" y="-8" width="15" height="12" rx="1" fill="#ffffff" opacity="0.9"/>
-                <line x1="-22" y1="-5" x2="-22" y2="1" stroke="#27ae60" stroke-width="1"/>
-                <line x1="-18" y1="-5" x2="-18" y2="1" stroke="#27ae60" stroke-width="1"/>
-                
-                <!-- Graduation cap -->
-                <polygon points="0,-8 15,-5 15,-2 0,1 -15,-2 -15,-5" fill="#ffffff" opacity="0.9"/>
-                <rect x="-1" y="-8" width="2" height="8" fill="#ffffff"/>
-                <circle cx="1" cy="-8" r="2" fill="#f39c12"/>
-                
-                <!-- Wi-Fi signal -->
-                <path d="M 5 -5 Q 12 -8 19 -5" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.8"/>
-                <path d="M 7 -3 Q 12 -5 17 -3" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.6"/>
-                <circle cx="12" cy="-1" r="1" fill="#ffffff"/>
-            </g>
-            
-            <!-- Decorative elements -->
-            <circle cx="160" cy="60" r="3" fill="#ffffff" opacity="0.6"/>
-            <circle cx="40" cy="140" r="2" fill="#ffffff" opacity="0.7"/>
-            <circle cx="170" cy="150" r="2.5" fill="#ffffff" opacity="0.5"/>
-        </svg>
-    `;
-    
-    // Convert SVG to data URL
-    const svgBlob = new Blob([logoSVG], {type: 'image/svg+xml'});
-    const url = URL.createObjectURL(svgBlob);
-    
-    if (logoImg) {
-        logoImg.src = url;
-        logoImg.alt = "UniNest - University Solutions Platform";
+    const logoElement = document.querySelector('.logo-image');
+    if (logoElement) {
+        logoElement.style.opacity = '0';
+        logoElement.style.transform = 'scale(0.8)';
         
-        // Add animation on load
-        logoImg.onload = function() {
-            this.style.opacity = '0';
-            this.style.transform = 'scale(0.5)';
-            
-            setTimeout(() => {
-                this.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-                this.style.opacity = '1';
-                this.style.transform = 'scale(1)';
-            }, 200);
-            
-            URL.revokeObjectURL(url);
-        };
+        setTimeout(() => {
+            logoElement.src = 'assets/images/logo.svg';
+            logoElement.style.transition = 'all 0.5s ease';
+            logoElement.style.opacity = '1';
+            logoElement.style.transform = 'scale(1)';
+        }, 100);
     }
 }
 
@@ -463,7 +443,7 @@ if (typeof module !== 'undefined' && module.exports) {
         animateCounter,
         initSmoothScrolling,
         initInteractiveFeatures,
-        initChallengeInteractions,
+        initFeatureInteractions,
         initProgressTracking,
         loadUniNestLogo
     };

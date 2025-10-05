@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniNest - Project Retrospective</title>
+    <title>UniNest - All-in-One Campus App</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,145 +13,191 @@
         <header class="header">
             <div class="logo">
                 <div class="logo-container">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="UniNest Logo" class="logo-image" id="uniNestLogo">
+                                <img src="assets/images/logo.svg" alt="UniNest Logo" class="logo-image">
                     <div class="logo-text">
                         <h1>UniNest</h1>
-                        <p class="tagline">Solving University Problems, One Solution at a Time</p>
+                        <p class="tagline">Your Friendly All-in-One Campus Companion</p>
                     </div>
                 </div>
             </div>
             <nav class="nav">
-                <a href="#welcome" class="nav-link">Welcome</a>
-                <a href="#challenges" class="nav-link">Challenges</a>
-                <a href="#solutions" class="nav-link">Solutions</a>
-                <a href="#learnings" class="nav-link">Learnings</a>
+                <a href="#welcome" class="nav-link">About</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#demo" class="nav-link">Demo</a>
+                <a href="#team" class="nav-link">Team</a>
             </nav>
         </header>
 
         <!-- Welcome and Purpose Section -->
         <section id="welcome" class="section welcome-section">
             <div class="content">
-                <h2 class="section-title">Welcome & Purpose</h2>
+                <h2 class="section-title">About UniNest</h2>
                 <div class="intro-card">
-                    <h3>Project Retrospective Overview</h3>
+                    <h3>Your All-in-One Campus Solution</h3>
                     <p class="intro-text">
-                        Welcome to the UniNest project retrospective. This comprehensive review examines our journey in creating 
-                        innovative solutions for university-related challenges, transforming problems into practical web-based products.
+                        Instead of jumping between many scattered systems (canteen menu, library site, random chat groups, paper notices), 
+                        students and staff get one clean place to do daily tasks. Save time, reduce confusion, help new students feel included, 
+                        and make campus life smoother.
                     </p>
                     
-                    <div class="goals-grid">
-                        <div class="goal-item">
-                            <div class="goal-icon">🎯</div>
-                            <h4>Primary Goal</h4>
-                            <p>Develop a comprehensive platform addressing key university pain points through technology</p>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📱</div>
+                            <h4>One App Instead of Many</h4>
+                            <p>No more juggling multiple bookmarks and scattered systems</p>
                         </div>
-                        <div class="goal-item">
-                            <div class="goal-icon">🚀</div>
-                            <h4>Innovation Focus</h4>
-                            <p>Create user-friendly web solutions that streamline university processes and enhance student experience</p>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⏰</div>
+                            <h4>Save Time</h4>
+                            <p>Less waiting in lines, quick access to information</p>
                         </div>
-                        <div class="goal-item">
-                            <div class="goal-icon">🤝</div>
-                            <h4>Community Impact</h4>
-                            <p>Build a platform that serves both students and university administration effectively</p>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🤝</div>
+                            <h4>Connect & Help</h4>
+                            <p>Friendly place for freshers to ask seniors for help</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📋</div>
+                            <h4>Stay Organized</h4>
+                            <p>Never miss deadlines with smart reminders</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🔍</div>
+                            <h4>Find Things</h4>
+                            <p>Quick way to track and recover lost items</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌟</div>
+                            <h4>Feel Included</h4>
+                            <p>Help new students integrate into campus life</p>
                         </div>
                     </div>
 
                     <div class="project-stats">
                         <div class="stat">
-                            <span class="stat-number" id="projectDuration">0</span>
-                            <span class="stat-label">Days in Development</span>
+                            <span class="stat-number" id="plannedFeatures">8</span>
+                            <span class="stat-label">Core Features Planned</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number" id="featuresBuilt">0</span>
-                            <span class="stat-label">Features Implemented</span>
+                            <span class="stat-number" id="teamMembers">3</span>
+                            <span class="stat-label">Team Members</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number" id="issuesResolved">0</span>
-                            <span class="stat-label">Issues Resolved</span>
+                            <span class="stat-number" id="developmentPhases">6</span>
+                            <span class="stat-label">Development Phases</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Challenges Faced Section -->
-        <section id="challenges" class="section challenges-section">
+        <!-- Features Section -->
+        <section id="features" class="section features-section">
             <div class="content">
-                <h2 class="section-title">Challenges Faced</h2>
+                <h2 class="section-title">Main Features</h2>
                 
-                <div class="challenges-container">
-                    <!-- Technical Difficulties -->
-                    <div class="challenge-category">
-                        <div class="challenge-header">
-                            <div class="challenge-icon">⚙️</div>
-                            <h3>Technical Difficulties</h3>
+                <div class="features-container">
+                    <!-- Canteen -->
+                    <div class="feature-category">
+                        <div class="feature-header">
+                            <div class="feature-icon">🍽️</div>
+                            <h3>Canteen</h3>
                         </div>
-                        <div class="challenge-list">
-                            <div class="challenge-item">
-                                <h4>Frontend Integration Complexity</h4>
-                                <p>Struggled with responsive design implementation across different devices and browsers</p>
-                                <div class="severity high">High Impact</div>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h4>Smart Menu System</h4>
+                                <p>See the menu with real-time availability, prices, and estimated calorie counts</p>
+                                <div class="status planned">Planned</div>
                             </div>
-                            <div class="challenge-item">
-                                <h4>Database Schema Design</h4>
-                                <p>Initial database structure didn't accommodate the complex relationships between university entities</p>
-                                <div class="severity medium">Medium Impact</div>
+                            <div class="feature-item">
+                                <h4>Pre-order & Pay</h4>
+                                <p>Order food online and get alerts when it's ready - skip the queue!</p>
+                                <div class="status planned">Planned</div>
                             </div>
-                            <div class="challenge-item">
-                                <h4>API Performance Optimization</h4>
-                                <p>Encountered slow response times when handling large datasets from university systems</p>
-                                <div class="severity medium">Medium Impact</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Time Management -->
-                    <div class="challenge-category">
-                        <div class="challenge-header">
-                            <div class="challenge-icon">⏰</div>
-                            <h3>Time Management</h3>
-                        </div>
-                        <div class="challenge-list">
-                            <div class="challenge-item">
-                                <h4>Scope Creep</h4>
-                                <p>Additional features were continuously added, extending the project timeline beyond initial estimates</p>
-                                <div class="severity high">High Impact</div>
-                            </div>
-                            <div class="challenge-item">
-                                <h4>Testing Phase Underestimation</h4>
-                                <p>Insufficient time allocated for comprehensive testing led to rushed deployment preparation</p>
-                                <div class="severity medium">Medium Impact</div>
-                            </div>
-                            <div class="challenge-item">
-                                <h4>Research and Learning Curve</h4>
-                                <p>New technologies required more learning time than anticipated</p>
-                                <div class="severity low">Low Impact</div>
+                            <div class="feature-item">
+                                <h4>Rate & Review</h4>
+                                <p>Rate meals so the canteen can improve and help other students choose</p>
+                                <div class="status planned">Planned</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Communication Gaps -->
-                    <div class="challenge-category">
-                        <div class="challenge-header">
-                            <div class="challenge-icon">💬</div>
-                            <h3>Communication Gaps</h3>
+                    <!-- Library -->
+                    <div class="feature-category">
+                        <div class="feature-header">
+                            <div class="feature-icon">📚</div>
+                            <h3>Library</h3>
                         </div>
-                        <div class="challenge-list">
-                            <div class="challenge-item">
-                                <h4>Stakeholder Feedback Delays</h4>
-                                <p>Inconsistent communication with university stakeholders led to misaligned expectations</p>
-                                <div class="severity medium">Medium Impact</div>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h4>Book Availability</h4>
+                                <p>Check if books are available and reserve them instantly</p>
+                                <div class="status planned">Planned</div>
                             </div>
-                            <div class="challenge-item">
-                                <h4>Documentation Inconsistencies</h4>
-                                <p>Lack of standardized documentation format caused confusion during development handoffs</p>
-                                <div class="severity low">Low Impact</div>
+                            <div class="feature-item">
+                                <h4>Smart Reminders</h4>
+                                <p>Get reminders before due dates to avoid late fees</p>
+                                <div class="status planned">Planned</div>
                             </div>
-                            <div class="challenge-item">
-                                <h4>Version Control Conflicts</h4>
-                                <p>Merge conflicts occurred due to insufficient communication about simultaneous feature development</p>
-                                <div class="severity low">Low Impact</div>
+                            <div class="feature-item">
+                                <h4>Digital Access</h4>
+                                <p>Access digital books and resources when available</p>
+                                <div class="status future">Future</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat & Community -->
+                    <div class="feature-category">
+                        <div class="feature-header">
+                            <div class="feature-icon">💬</div>
+                            <h3>Campus Chat</h3>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h4>Verified Community</h4>
+                                <p>Only verified university members can join - safe and secure</p>
+                                <div class="status planned">Planned</div>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Help Channels</h4>
+                                <p>Dedicated channels for freshers to ask seniors questions</p>
+                                <div class="status planned">Planned</div>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Smart Moderation</h4>
+                                <p>Basic moderation with report and mute features</p>
+                                <div class="status future">Future</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More Features -->
+                    <div class="feature-category">
+                        <div class="feature-header">
+                            <div class="feature-icon">�</div>
+                            <h3>More Features</h3>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h4>Notice Board</h4>
+                                <p>All campus notices in one place with smart filtering and push alerts</p>
+                                <div class="status priority">Priority</div>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Smart Timetable</h4>
+                                <p>Personal schedule with room numbers and overlap detection</p>
+                                <div class="status planned">Planned</div>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Lost & Found</h4>
+                                <p>Post and search for lost items with photos and categories</p>
+                                <div class="status planned">Planned</div>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Weather Alerts</h4>
+                                <p>Campus weather updates and severe weather warnings</p>
+                                <div class="status planned">Planned</div>
                             </div>
                         </div>
                     </div>
@@ -159,81 +205,182 @@
             </div>
         </section>
 
-        <!-- Solutions & Learnings Section -->
-        <section id="solutions" class="section solutions-section">
+        <!-- Demo Flow Section -->
+        <section id="demo" class="section demo-section">
             <div class="content">
-                <h2 class="section-title">Solutions & Improvements</h2>
-                <div class="solutions-grid">
-                    <div class="solution-card">
-                        <h3>Technical Solutions</h3>
-                        <ul>
-                            <li>Implemented modular CSS architecture for better maintainability</li>
-                            <li>Adopted progressive web app principles for better performance</li>
-                            <li>Integrated caching strategies to improve load times</li>
-                        </ul>
+                <h2 class="section-title">How It Helps Your Day</h2>
+                <div class="demo-container">
+                    <div class="demo-timeline">
+                        <div class="demo-item">
+                            <div class="demo-time">🌅 Morning</div>
+                            <div class="demo-content">
+                                <h4>Start Your Day Smart</h4>
+                                <p>Open app → See today's classes + weather → Decide to bring umbrella</p>
+                            </div>
+                        </div>
+                        <div class="demo-item">
+                            <div class="demo-time">🍽️ Lunch</div>
+                            <div class="demo-content">
+                                <h4>Skip the Queue</h4>
+                                <p>Pre-order food → Get notification when ready → Grab and go!</p>
+                            </div>
+                        </div>
+                        <div class="demo-item">
+                            <div class="demo-time">📚 Afternoon</div>
+                            <div class="demo-content">
+                                <h4>Library Made Easy</h4>
+                                <p>Check book availability → Reserve instantly → Pick up when convenient</p>
+                            </div>
+                        </div>
+                        <div class="demo-item">
+                            <div class="demo-time">🌙 Evening</div>
+                            <div class="demo-content">
+                                <h4>Stay Organized</h4>
+                                <p>Add upcoming assignment → Auto reminders start → Never miss deadlines</p>
+                            </div>
+                        </div>
+                        <div class="demo-item">
+                            <div class="demo-time">💬 Anytime</div>
+                            <div class="demo-content">
+                                <h4>Get Help When Needed</h4>
+                                <p>Ask seniors "How to register for lab?" → Quick, friendly answers</p>
+                            </div>
+                        </div>
+                        <div class="demo-item">
+                            <div class="demo-time">🔍 Emergency</div>
+                            <div class="demo-content">
+                                <h4>Lost Something?</h4>
+                                <p>Lost wallet? → Check Lost & Found → Connect with finder</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="solution-card">
-                        <h3>Process Improvements</h3>
-                        <ul>
-                            <li>Established daily standup meetings for better coordination</li>
-                            <li>Implemented agile sprints with defined deliverables</li>
-                            <li>Created comprehensive testing checklists</li>
-                        </ul>
-                    </div>
-                    <div class="solution-card">
-                        <h3>Communication Enhancements</h3>
-                        <ul>
-                            <li>Set up regular stakeholder review sessions</li>
-                            <li>Established clear documentation standards</li>
-                            <li>Implemented code review processes</li>
-                        </ul>
+                </div>
+                
+                <div class="user-stories">
+                    <h3>What Students Say They Want</h3>
+                    <div class="stories-grid">
+                        <div class="story-card">
+                            <div class="story-icon">🆕</div>
+                            <p>"As a fresher, I want to ask seniors questions without feeling shy."</p>
+                        </div>
+                        <div class="story-card">
+                            <div class="story-icon">⏰</div>
+                            <p>"As a busy student, I want reminders so I don't miss deadlines."</p>
+                        </div>
+                        <div class="story-card">
+                            <div class="story-icon">☔</div>
+                            <p>"I want to quickly see if it will rain before a long walk."</p>
+                        </div>
+                        <div class="story-card">
+                            <div class="story-icon">🍽️</div>
+                            <p>"As a canteen vendor, I want to know orders ahead of peak time."</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Key Learnings Section -->
-        <section id="learnings" class="section learnings-section">
+        <!-- Team & Development Section -->
+        <section id="team" class="section team-section">
             <div class="content">
-                <h2 class="section-title">Key Learnings & Next Steps</h2>
-                <div class="learnings-container">
-                    <div class="learning-item">
-                        <h3>🎓 Technical Learnings</h3>
-                        <p>Mastered responsive design patterns and gained deep understanding of modern JavaScript frameworks for university application development.</p>
-                    </div>
-                    <div class="learning-item">
-                        <h3>📋 Project Management</h3>
-                        <p>Learned the importance of realistic time estimation and the value of iterative development in university project contexts.</p>
-                    </div>
-                    <div class="learning-item">
-                        <h3>🤝 Stakeholder Engagement</h3>
-                        <p>Discovered the critical importance of continuous communication with university administrators and end users.</p>
+                <h2 class="section-title">Team & Development</h2>
+                
+                <div class="team-container">
+                    <h3>Meet the Team</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-avatar">👨‍💻</div>
+                            <h4>Majharul Islam</h4>
+                            <p class="member-role">Student Developer & Project Lead</p>
+                            <p class="member-focus">Full-stack development & Project coordination</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">👨‍💻</div>
+                            <h4>Taslim Ahmed Tamim</h4>
+                            <p class="member-role">Student Developer</p>
+                            <p class="member-focus">Frontend development & UI/UX design</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">👨‍💻</div>
+                            <h4>Salman Kabir Sany</h4>
+                            <p class="member-role">Student Developer</p>
+                            <p class="member-focus">Backend development & Database design</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="next-steps">
-                    <h3>Next Steps for UniNest</h3>
-                    <div class="steps-timeline">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4>Phase 2 Development</h4>
-                                <p>Implement advanced features based on user feedback</p>
+                <div class="development-plan">
+                    <h3>Development Roadmap</h3>
+                    <div class="phases-timeline">
+                        <div class="phase">
+                            <div class="phase-number">1</div>
+                            <div class="phase-content">
+                                <h4>Foundation</h4>
+                                <p>Auth system + Notice Board</p>
+                                <div class="phase-status current">Current</div>
                             </div>
                         </div>
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4>University Partnerships</h4>
-                                <p>Expand to additional university campuses</p>
+                        <div class="phase">
+                            <div class="phase-number">2</div>
+                            <div class="phase-content">
+                                <h4>Canteen</h4>
+                                <p>Menu system + Pre-ordering</p>
+                                <div class="phase-status planned">Next</div>
                             </div>
                         </div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4>Mobile Application</h4>
-                                <p>Develop native mobile apps for enhanced accessibility</p>
+                        <div class="phase">
+                            <div class="phase-number">3</div>
+                            <div class="phase-content">
+                                <h4>Library</h4>
+                                <p>Book search + Reminders</p>
+                                <div class="phase-status planned">Planned</div>
                             </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-number">4</div>
+                            <div class="phase-content">
+                                <h4>Community</h4>
+                                <p>Chat + Lost & Found</p>
+                                <div class="phase-status planned">Planned</div>
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-number">5</div>
+                            <div class="phase-content">
+                                <h4>Smart Features</h4>
+                                <p>Timetable + Exam countdown</p>
+                                <div class="phase-status planned">Planned</div>
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase-number">6</div>
+                            <div class="phase-content">
+                                <h4>Launch</h4>
+                                <p>Polish + Test + Demo</p>
+                                <div class="phase-status planned">Planned</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <h3>Technology Stack</h3>
+                    <div class="tech-categories">
+                        <div class="tech-category">
+                            <h4>🎨 Frontend</h4>
+                            <p>React.js, Modern CSS, PWA</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>⚙️ Backend</h4>
+                            <p>Node.js, Express, WebSockets</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>🗄️ Database</h4>
+                            <p>PostgreSQL</p>
+                        </div>
+                        <div class="tech-category">
+                            <h4>🔌 APIs</h4>
+                            <p>Weather API, Payment Gateway</p>
                         </div>
                     </div>
                 </div>
@@ -243,11 +390,11 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <p>&copy; 2025 UniNest Project. Building the future of university solutions.</p>
+                <p>&copy; 2025 UniNest. Building something students actually enjoy using. 💡</p>
                 <div class="footer-links">
+                    <a href="https://github.com/MrMajharul/uniNest" class="footer-link">GitHub</a>
                     <a href="#" class="footer-link">Documentation</a>
-                    <a href="#" class="footer-link">GitHub</a>
-                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Contact Team</a>
                 </div>
             </div>
         </footer>
