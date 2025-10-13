@@ -253,7 +253,7 @@ We'll keep things simple at the start (maybe just a single repo).
 
 ## 📄 License
 
-(To decide) — Likely MIT so others can learn from it.
+(To decide)
 
 ## � Current Status
 
